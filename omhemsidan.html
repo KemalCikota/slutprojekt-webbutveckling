@@ -15,26 +15,62 @@
             <div><a href="omhemsidan.html">Om Hemsidan</a></div>
         </nav>
 		<!--Här slutar nav-->
-			</nav>
+			
             <!--Här startar en ny nav som är av klassen lokalmeny-->
 			<nav class="lokalmeny">
-                <!--Gör en div och skapar en länk i den som leder till OmDavid.html-->
+                <!--Gör en div och skapar en länk i den som leder till Ommig.html-->
 				<div><a href="OmMig.html">Om Mig</a></div>
 				<div><a href="omhemsidan.html">Om hemsidan</a></div>
             <!--Här slutar nav lokalmeny-->
 			</nav>
             <!--Gör en main som är klassen OmHemsidan-->
-			<main class="OmHemsidan">
+				<main class="OmHemsidan">
                 <!--Gör en div som är i klassen textomhemsidan-->
 				<div class="textomhemsidan">
                     <!--Gör en underrubrik och stänger den-->
 					<h2>Om Den Här Hemsidan</h2>
                     <!--Gör en text och stänger den-->
 					<p>Tack för att ni har besökt min hemsida! Mer information om skaparen till hemsidan hittar ni ovanför.<br/>Det här projektet ska fungera som en kunskapsbas för alla möjliga sorts sporter runt om i världen och jag hoppas att upplevelssen på min hemsida var bra!<br/>Kolla på videon för att se varför jag älskar sport!</p>
-                   
+                    <br/><br/>
+					<!--ett formulär där man kan lämna en bedömning -->
+					<h3>Vad tycker ni om min hemsida?</h3>
+					
+					<form>
+					<input type="radio" id="bra" name="betyg" value="bra">
+					<label for="bra">bra</label><br>
+					<input type="radio" id="sådär" name="betyg" value="sådär">
+					<label for="sådär">sådär</label><br>
+					<input type="radio" id="dålig" name="betyg" value="dålig">
+					<label for="dålig">dålig</label>
+					</form>
+					<br><br>
+					
+					
+					<!-- ett formulär med "checkbox" -->
+					<h4> Vilka sporter vill ni se på min sida?</h4>
+					
+					<input type="checkbox" id="sport1" name="Sport1" value="Golf">
+					<label for="sport1"> Golf</label><br>
+					<input type="checkbox" id="sport2" name="Sport2" value="Tennis">
+					<label for="sport2"> Tennis</label><br>
+					<input type="checkbox" id="sport3" name="Sport3" value="Simning">
+					<label for="sport3"> Simning</label><br>
+					<br><br>
+					<!--ett formulär med submit -->
+					<h5>Gör gärna ett konto hos oss så du vet när vi gör uppdateringar på vår sida!</h5>
+					<br><br>
+					
+					<form action="startsida.html" method="post">
+					<label for="fnamn">Andvändarnamn:</label><br>
+					<input type="text" id="fnamn" name="fnamn" value="Andvändare"><br>
+					<label for="lösen">Lösenord</label><br>
+					<input type="password" id="lösen" name="lösen" value="Lösenord"><br><br>
+					<input type="submit" value="Submit">
+					</form>
+					
 				</div>
 				<div>
-                    <!--Gör en bild som har attributen "alt = bild på en hund"-->
+                    <!--Gör en bild som har attributen "alt = video med sporter"-->
 					<iframe width="420" height="315"
 					src="https://www.youtube.com/embed/qnMxsGeDz90">
 					</iframe>
@@ -43,7 +79,7 @@
 				</div>
             <!--Stänger main-->
 			</main>
-        <!--stänger wrappern-->
-		</div>
+        
+		
     <!--Stänger bodyn-->
     </body>
