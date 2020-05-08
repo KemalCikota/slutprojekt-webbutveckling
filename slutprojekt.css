@@ -1,0 +1,304 @@
+/*Johan Hasselblads del börjar*/
+/*Gör ändringar på alla header*/
+header{
+    /*ändrar bakgrunden i headern till en bild*/
+    Background:url("https://i.pinimg.com/originals/74/e6/49/74e6499a2d31c1bf30bf1713a9ad39df.jpg");
+	/*Ändrar positionen av bilden till mitten*/
+    background-position:center;
+    /*Gör headern 4 pixlar större åt alla håll*/
+    padding:4px;
+    /*Gör texten vit*/
+	color:rgb(255,255,255);
+    /*Sätter texten i mitten av headern*/
+    text-align:center;
+    /*Gör den till en grid area som heter head så att jag kan välja plats på den i griden senare*/
+	grid-area: head;
+}
+/*Ändrar saker för meny-gruppen*/
+.meny{
+    /*Skapar en grid i meny för att placera länkarna i senare*/
+	display:grid;
+    /*Bestämmer storleken för columnerna i griden och gör dem alla lika stora (1 fraktion)*/
+	grid-template-columns:1fr 1fr 1fr;
+    /*Gör meny till en grid area som heter nav för att kunna sätta den i sidans grid senare*/
+	grid-area: nav;
+}
+/*Gör ändringar i alla div som befinner sig i meny-gruppen*/
+.meny div{
+    /*Sätter texten i mitten*/
+    text-align:center;
+    /*Ändrar bakgrundsfärgen till svart*/
+    background-color:rgb(0,0,0);
+    /*Gör alla div 10 pixlar större åt alla håll*/
+    padding:10px;
+}
+/*Gör ändringar för när man håller muspekaren över alla div i meny-gruppen*/
+.meny div:hover{
+    /*Gör bakgrunden till grå när man håller muspekaren över dem*/
+    background-color:rgb(130,130,130);
+    /*Gör textens färg till vit när man håller muspekaren över dem*/
+    color:rgb(255,255,255);
+}
+/*Gör ändringar för alla länkar i meny-gruppen*/
+.meny a{
+    /*Gör hela diven till ett block så man kommer till länken om man klickar någonstans innanför diven*/
+    display:block;
+    /*Gör länkarnas texten vit*/
+    color:rgb(255,255,255);
+    /*Tar bort understruckingen och så länkarna inte ändrar färg*/
+    text-decoration:none;
+}
+/*Gör ändringar för lokalmeny-gruppen*/
+.lokalmeny{
+    /*Gör lokalmeny till en grid area som heter lokal för att kunna placera den i sidans grid*/
+	grid-area: lokal;
+}
+/*Gör ändringar för alla div i lokalmeny-gruppen*/
+.lokalmeny div{
+    /*placerar texten i mitten av div*/
+	text-align: center;
+    /*Ändrar backgrunden till svart*/
+	background-color:rgb(0,0,0);
+    /*Gör alla div 5 pixlar större åt alla håll*/
+	padding: 5px;
+}
+/*Gör ändringar för alla länkar i lokalmeny-gruppen*/
+.lokalmeny a{
+    /*Gör så att länken fyller ut hela div som den är i så att man kan klicka på länken i hela diven*/
+	display:block;
+    /*Gör texten vit*/
+	color:rgb(255,255,255);
+	text-decoration:none;
+}
+/*Gör ändringar för alla div i lokalmeny-gruppen när man håller muspekaren över diven*/
+.lokalmeny div:hover{
+    /*Ändrar bakgrunden till grå*/
+	background-color:rgb(130,130,130);
+    /*Ändrar texten till vit*/
+	color:rgb(255,255,255);
+}
+/*Gör ändringar för OmHemsidan-gruppen*/
+.OmHemsidan{
+    /*Gör OmHemsidan till en grid area som heter hemsida för att kunna sätta in den i griden för sidan*/
+	grid-area:hemsida;
+    /*Gör så att den har en egen grid*/
+	display:grid;
+    /*Väljer att griden ska vara indelad i två delar som den vänstra är 2 fraktioner och den andra är 1.5 fraktioner*/
+	grid-template-columns:2fr 1.5fr;
+}
+/*Gör ändringar för Ommig-gruppen*/
+.Ommig{
+    /*Gör Ommig-gruppen till en grid som heter kemal som jag kan sätta in i sidans grid*/
+	grid-area:kemal;
+    /*Gör så att gruppen har en egen grid i sig*/
+	display:grid;
+    /*Gör så att Ommigs grid är i två delar som är 2 fraktioner och 1 fraktioner*/
+	grid-template-columns:2fr 1fr;
+}
+.Omfotboll{
+	grid-area:Fotboll;
+    /*Gör så att gruppen har en egen grid i sig*/
+	display:grid;
+	grid-template-columns:2fr 1fr;
+}
+.Ombasket{
+	grid-area:Fotboll;
+    /*Gör så att gruppen har en egen grid i sig*/
+	display:grid;
+	grid-template-columns:2fr 1fr;
+}
+/*Gör ändringar för båda mina sidors wrappers*/
+.wrapperOmDavid,.wrapperOmhemsidan{
+    /*Gör så att dem har en grid som är båda sidornas grids*/
+	display:grid;
+    /*Gör så att griden är indelad i 4 st delar som är 0,5 fraktioner och 1 fraktion stora*/
+	grid-template-columns:0.5fr 1fr 1fr 1fr;
+    /*Gör så det är ett mellanrum mellan de olika grid-areorna i griden*/
+	grid-gap:2px;
+}
+/*Gör ändringar för wrapperOmHemsidan-gruppen*/
+.wrapperOmhemsidan{
+    /*Bestämmer hur grid-areorna ska vara plaserade i wrapperOmHemsidans grid*/
+	grid-template-areas:
+	"head head head head"
+	"nav nav nav nav"
+	"lokal hemsida hemsida hemsida";
+}
+/*Gör ändringar för wrapperOmDavid-gruppen*/
+.wrapperOmDavid{
+    /*Bestämmer hur grid-areorna ska vara plaserade i wrapperOmDavids grid*/
+	grid-template-areas:
+	"head head head head"
+	"nav nav nav nav"
+	"lokal david david david";
+}
+/*Gör ändringar för alla texter som är direkt efter en bild i OmDavid-gruppen*/
+.Ommig img + p{
+    /*Gör så att den har ett rundat hörn med 2em som radius*/
+	border-radius:2em;
+}
+/*Gör ändringar för alla bilder i OmDavid-gruppen*/
+.Ommig img{
+    /*Gör så att bilden fyller 100% av diven på bredden*/
+	width:100%;
+    /*Gör så att bilden har ett rundat hörn på 2.5em som radius*/
+	border-radius:2.5em;
+}
+.OmFotboll img + p{
+    /*Gör så att den har ett rundat hörn med 2em som radius*/
+	border-radius:2em;
+}
+/*Gör ändringar för alla bilder i OmDavid-gruppen*/
+.OmFotboll img{
+    /*Gör så att bilden fyller 100% av diven på bredden*/
+	width:100%;
+    /*Gör så att bilden har ett rundat hörn på 2.5em som radius*/
+	border-radius:2.5em;
+}
+
+/*Gör ändringar för alla texter med attributen class = "bildtext"*/
+p[class="bildtext"]{
+    /*Gör så att bakgrunden är grå*/
+	background-color:rgb(170,170,170);
+    /*Gör en border som är solid*/
+	border-style:solid;
+    /*Bestämmer att bredden på bordern är 1 pixel*/
+	border-width:1px;
+    /*Göt så att texten är i mitten*/
+	text-align:center;
+}
+.Ombasket img + p{
+    /*Gör så att den har ett rundat hörn med 2em som radius*/
+	border-radius:2em;
+}
+/*Gör ändringar för alla bilder i OmDavid-gruppen*/
+.Ombasket img{
+    /*Gör så att bilden fyller 100% av diven på bredden*/
+	width:100%;
+    /*Gör så att bilden har ett rundat hörn på 2.5em som radius*/
+	border-radius:2.5em;
+}
+
+/*Gör ändringar för alla texter med attributen class = "bildtext"*/
+p[class="bildtext"]{
+    /*Gör så att bakgrunden är grå*/
+	background-color:rgb(170,170,170);
+    /*Gör en border som är solid*/
+	border-style:solid;
+    /*Bestämmer att bredden på bordern är 1 pixel*/
+	border-width:1px;
+    /*Göt så att texten är i mitten*/
+	text-align:center;
+}
+/*Gör ändringar för alla första bokstäver i alla texter som är i textommig-gruppen*/
+.textommig p:first-letter{
+    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än rot-elementet*/
+	font-size:1.5rem;
+}
+.textomfotboll p:first-letter{
+    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än rot-elementet*/
+	font-size:1.5rem;
+}
+/*Gör ändingar för alla bilder med attributen alt = "Bild på Mig"*/
+img[alt="Bild på mig"]{
+    /*Gör så att den fyller 90% av diven på bredden*/
+	width:90%;
+    /*Gör så den har en border och gör den solid*/
+	border:solid;
+    /*Ger bordern och bilden runda hörn som är 1em*/
+	border-radius:1em;
+    /*Gör så att bilden är 5% ifrån elementet som är över den*/
+	margin-top:5%;
+    /*Gör så att den är 5% ifrån elementet som är till vänster om bilden*/
+	margin-left:5%;
+}
+.textombasket p:first-letter{
+    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än rot-elementet*/
+	font-size:1.5rem;
+}
+/*Gör ändingar för alla bilder med attributen alt = "Bild på basket"*/
+img[alt="Bild på basket"]{
+    /*Gör så att den fyller 90% av diven på bredden*/
+	width:90%;
+    /*Gör så den har en border och gör den solid*/
+	border:solid;
+    /*Ger bordern och bilden runda hörn som är 1em*/
+	border-radius:1em;
+    /*Gör så att bilden är 5% ifrån elementet som är över den*/
+	margin-top:5%;
+    /*Gör så att den är 5% ifrån elementet som är till vänster om bilden*/
+	margin-left:5%;
+}
+/*Gör ändingar för td och th som befinner sig i typerhundar-gruppen*/
+.typerhundar td,th{
+    /*Gör en border och gör så den är solid och så att den är 2 pixlar bred*/
+	border:2px solid;
+}
+/*Gör ändringar för typerhundar-gruppen*/
+.typerhundar{
+    /*Gör en border som är solid och 2 pixlar bred*/
+	border:2px solid;
+    /*Gör så att alla borders som är brevid varandra i typerhundar-gruppen går ihop så att det bara blir en emellan dem*/
+	border-collapse:collapse;
+}
+/*Gör ändringar för alla caption i typerhundar-gruppen*/
+.typerhundar caption{
+    /*Gör textstorleken till 1.5 gånger större än rot-elementet*/
+	font-size:1.5rem;
+}
+/*Gör ändringar för alla udda tr som befinner sig i tbody*/
+tbody tr:nth-child(odd){
+    /*Gör bakgrundsfärgen till grå*/
+	background-color:rgb(150,150,150);
+}
+/*Johans del slutar*/
+
+/*Kemals del börjar*/
+           /*Klass för struktur på text*/
+.grid-container {
+ display: grid;
+ grid-template-columns: auto auto auto;
+ background-color: black;
+}
+           /*Klass för texten*/
+.grid-item > p{
+ color:white;
+ padding:20px;
+ font-size:30px; 
+ text-align:center;
+}
+           /*Klassen för struktur på globala menyn*/
+.grid-container2{
+ display: grid;
+ grid-template-columns:auto auto auto;
+ background-color:grey;
+}
+/*Kemals del slutar*/
+
+/*Filips del börjar*/
+    /*Klassen för strukturen på texten*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color:black;
+ 
+    /*Klassen för texten*/
+}
+.grid-item {
+  color:white;
+  padding: 20px;
+  font-size: 19px;
+  text-align: center;
+}
+    /* Klassen för globala menyn för att få avstånd mellan dem*/
+.grid-container2{
+  display: grid;
+  grid-template-columns:auto auto auto;
+  background-color:grey;
+}
+    /*För att centrera globala menyn*/
+body {
+    text-align:center;
+
+}
+/*Filips del slutar*/
