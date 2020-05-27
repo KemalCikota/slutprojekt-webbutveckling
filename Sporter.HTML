@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sv">
     <head>
         <meta charset="utf-8">
@@ -11,17 +11,21 @@
         </header>
        
 		<!--här är min globala meny-->
-	   <nav class="meny">
-            <div><a href="Startsida.html">Startsida</a></div>
-            <div><a href="sporter.html">SPORTER</a></div>
-            <div><a href="omhemsidan.html">Om Hemsidan</a></div>
+	   
+        <nav class="meny">
+           <ul>
+             <li><a href="index.html">Startsida</a></li>
+             <li><a href="sporter.html">SPORTER</a></li>
+             <li><a href="omhemsidan.html">Om Hemsidan</a></li>
+            </ul>
         </nav>
 		
 		<!--här är bildlänken till basketsidan -->
+        <main>
 		<div class="grid-container">
 			<div class="grid-item">
 				<a href="basket.html">
-				<img src="https://s.yimg.com/ny/api/res/1.2/F9num7mRcIZn6iK0UYbPBQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NzQ0O2g9NDg4/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/1b0d62a3bbb906ba8b5487b35055669f" alt="Basket" class="Basket" width="447" height="400">
+				<img src="https://s.yimg.com/ny/api/res/1.2/F9num7mRcIZn6iK0UYbPBQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NzQ0O2g9NDg4/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/1b0d62a3bbb906ba8b5487b35055669f" alt="Basket" class="indexbilder">
 				</a>
 				<p>Basket</p>
 			</div> 
@@ -30,7 +34,7 @@
 			<!--här är bildlänken till fotbollssidan -->
 			<div class="grid-item">
 				<a href ="fotboll.html">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Football_iu_1996.jpg" alt="Fotboll" class="Fotboll" width="447" height="400">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Football_iu_1996.jpg" alt="Fotboll" class="indexbilder">
 				</a>
 				<p>Fotboll</p>
 			</div>
@@ -39,19 +43,22 @@
 			<!--här är bildlänken till pingissidan -->
 			<div class="grid-item">
 				<a href ="pingis.html">
-				<img src="https://newfanzoneblog.files.wordpress.com/2016/10/ma-long-table-tennis-flooring-supplier-tinsue-olympic-games.jpg?w=640" alt="Pingis" class="Pingis" width="447" height="400">
+				<img src="https://newfanzoneblog.files.wordpress.com/2016/10/ma-long-table-tennis-flooring-supplier-tinsue-olympic-games.jpg?w=640" alt="Pingis" class="indexbilder">
 				</a>	
 				<p>Pingis</p>
 			</div>
-			
+            </div>
+			</main>
 			<!--Här startar en ny nav som är av klassen lokalmeny-->
 			<nav class="lokalmeny">
-				<div><a href="basket.html">Basket</a></div>
-				<div><a href="fotboll.html">Fotboll</a></div>
-				<div><a href="pingis.html">Pingis</a></div>
+               <ul>
+				<li><a href="basket.html">Basket</a></li>
+				<li><a href="fotboll.html">Fotboll</a></li>
+				<li><a href="pingis.html">Pingis</a></li>
+               </ul>
             <!--Här slutar nav lokalmeny-->
 			</nav>
 			
-		</div>
+		
 	</body>
 </html>

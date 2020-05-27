@@ -14,17 +14,29 @@ header{
     /*Gör den till en grid area som heter head så att jag kan välja plats på den i griden senare*/
 	grid-area: head;
 }
+.main{
+    text-align : center
+}
 /*Ändrar saker för meny-gruppen*/
-.meny{
-    /*Skapar en grid i meny för att placera länkarna i senare*/
-	display:grid;
-    /*Bestämmer storleken för columnerna i griden och gör dem alla lika stora (1 fraktion)*/
-	grid-template-columns:1fr 1fr 1fr;
+nav{
+
     /*Gör meny till en grid area som heter nav för att kunna sätta den i sidans grid senare*/
 	grid-area: nav;
 }
+
+nav ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    /*Skapar en grid i meny för att placera länkarna i senare*/
+    display: grid;
+    /*Bestämmer storleken för columnerna i griden och gör dem alla lika stora (1 fraktion)*/
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+
+}
 /*Gör ändringar i alla div som befinner sig i meny-gruppen*/
-.meny div{
+nav li{
     /*Sätter texten i mitten*/
     text-align:center;
     /*Ändrar bakgrundsfärgen till svart*/
@@ -33,14 +45,14 @@ header{
     padding:10px;
 }
 /*Gör ändringar för när man håller muspekaren över alla div i meny-gruppen*/
-.meny div:hover{
+nav li:hover{
     /*Gör bakgrunden till grå när man håller muspekaren över dem*/
     background-color:rgb(130,130,130);
     /*Gör textens färg till vit när man håller muspekaren över dem*/
     color:rgb(255,255,255);
 }
 /*Gör ändringar för alla länkar i meny-gruppen*/
-.meny a{
+nav a{
     /*Gör hela diven till ett block så man kommer till länken om man klickar någonstans innanför diven*/
     display:block;
     /*Gör länkarnas texten vit*/
@@ -49,12 +61,14 @@ header{
     text-decoration:none;
 }
 /*Gör ändringar för lokalmeny-gruppen*/
-.lokalmeny{
-    /*Gör lokalmeny till en grid area som heter lokal för att kunna placera den i sidans grid*/
-	grid-area: lokal;
+.lokalmeny ul{
+    list-style-type : none;
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 /*Gör ändringar för alla div i lokalmeny-gruppen*/
-.lokalmeny div{
+.lokalmeny li{
     /*placerar texten i mitten av div*/
 	text-align: center;
     /*Ändrar backgrunden till svart*/
@@ -77,55 +91,19 @@ header{
     /*Ändrar texten till vit*/
 	color:rgb(255,255,255);
 }
-/*Gör ändringar för OmHemsidan-gruppen*/
-.OmHemsidan{
-    /*Gör OmHemsidan till en grid area som heter hemsida för att kunna sätta in den i griden för sidan*/
-	grid-area:hemsida;
-    /*Gör så att den har en egen grid*/
-	display:grid;
-    /*Väljer att griden ska vara indelad i två delar som den vänstra är 2 fraktioner och den andra är 1.5 fraktioner*/
-	grid-template-columns:2fr 1.5fr;
-}
-/*Gör ändringar för Ommig-gruppen*/
-.Ommig{
-    /*Gör Ommig-gruppen till en grid som heter kemal som jag kan sätta in i sidans grid*/
-	grid-area:kemal;
-    /*Gör så att gruppen har en egen grid i sig*/
-	display:grid;
-    /*Gör så att Ommigs grid är i två delar som är 2 fraktioner och 1 fraktioner*/
-	grid-template-columns:2fr 1fr;
-}
-.Omfotboll{
-	grid-area:Fotboll;
-    /*Gör så att gruppen har en egen grid i sig*/
-	display:grid;
-	grid-template-columns:2fr 1fr;
-}
-.Ombasket{
-	grid-area:Basket;
-    /*Gör så att gruppen har en egen grid i sig*/
-	display:grid;
-	grid-template-columns:2fr 1fr;
+
+main.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 /*Gör ändringar för alla texter som är direkt efter en bild i Ommig-gruppen*/
-.Ommig img + p{
+main.grid img + p{
     /*Gör så att den har ett rundat hörn med 2em som radius*/
 	border-radius:2em;
 }
 /*Gör ändringar för alla bilder i Ommig-gruppen*/
-.Ommig img{
-    /*Gör så att bilden fyller 100% av diven på bredden*/
-	width:100%;
-    /*Gör så att bilden har ett rundat hörn på 2.5em som radius*/
-	border-radius:2.5em;
-}
-.OmFotboll img + p{
-    /*Gör så att den har ett rundat hörn med 2em som radius*/
-	border-radius:2em;
-}
-/*Gör ändringar för alla bilder i Ommig-gruppen*/
-.OmFotboll img{
+main.grid img{
     /*Gör så att bilden fyller 100% av diven på bredden*/
 	width:100%;
     /*Gör så att bilden har ett rundat hörn på 2.5em som radius*/
@@ -143,30 +121,6 @@ p[class="bildtext"]{
     /*Göt så att texten är i mitten*/
 	text-align:center;
 }
-.Ombasket img + p{
-    /*Gör så att den har ett rundat hörn med 2em som radius*/
-	border-radius:2em;
-}
-/*Gör ändringar för alla bilder i Ombasket-gruppen*/
-.Ombasket img{
-    /*Gör så att bilden fyller 100% av diven på bredden*/
-	width:100%;
-    /*Gör så att bilden har ett rundat hörn på 2.5em som radius*/
-	border-radius:2.5em;
-}
-.Ompingis img + p{
-    /*Gör så att den har ett rundat hörn med 2em som radius*/
-	border-radius:2em;
-}
-/*Gör ändringar för alla bilder i Ombasket-gruppen*/
-.Ompingis img{
-    /*Gör så att bilden fyller 100% av diven på bredden*/
-	width:100%;
-    /*Gör så att bilden har ett rundat hörn på 2.5em som radius*/
-	border-radius:2.5em;
-}
-
-
 
 /*Gör ändringar för alla texter med attributen class = "bildtext"*/
 p[class="bildtext"]{
@@ -205,6 +159,17 @@ img[alt="Bild på mig"]{
     /*Gör så att texten är 1.5 rem som är 1.5 gånger större än rot-elementet*/
 	font-size:1.5rem;
 }
+
+iframe{
+    width: 420px;
+    height: 315px;
+}
+
+img{
+    width: 447px;
+    height: 400px;
+}
+
 /*Gör ändingar för alla bilder med attributen alt = "Bild på basket"*/
 img[alt="Bild på basket"]{
     /*Gör så att den fyller 90% av diven på bredden*/
@@ -236,20 +201,20 @@ img[alt="Bild på basket"]{
 	margin-left:5%;
 }
 
-/*Gör ändingar för td och th som befinner sig i typeravspelare-gruppen*/
-.typeravspelare td,th{
+/*Gör ändingar för td och th som befinner sig i Table*/
+table td, table th{
     /*Gör en border och gör så den är solid och så att den är 2 pixlar bred*/
 	border:2px solid;
 }
 /*Gör ändringar för typeravspelare-gruppen*/
-.typeravspelare{
+table{
     /*Gör en border som är solid och 2 pixlar bred*/
 	border:2px solid;
     /*Gör så att alla borders som är brevid varandra i typeravspelare-gruppen går ihop så att det bara blir en emellan dem*/
 	border-collapse:collapse;
 }
 /*Gör ändringar för alla caption i typeravspelare-gruppen*/
-.typeravspelare caption{
+table caption{
     /*Gör textstorleken till 1.5 gånger större än elementet*/
 	font-size:1.5rem;
 }
@@ -262,7 +227,7 @@ tbody tr:nth-child(odd){
 
 
            /*Klass för struktur på text*/
-.grid-container {
+.grid-container, .grid-container2{
  display: grid;
  grid-template-columns: auto auto auto;
  background-color: black;
@@ -276,33 +241,16 @@ tbody tr:nth-child(odd){
 }
            /*Klassen för struktur på globala menyn*/
 .grid-container2{
- display: grid;
- grid-template-columns:auto auto auto;
  background-color:grey;
 }
 
-
-
-    /*Klassen för strukturen på texten*/
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color:black;
- 
-    /*Klassen för texten*/
-}
 .grid-item {
   color:white;
   padding: 20px;
   font-size: 19px;
   text-align: center;
 }
-    /* Klassen för globala menyn för att få avstånd mellan dem*/
-.grid-container2{
-  display: grid;
-  grid-template-columns:auto auto auto;
-  background-color:grey;
-}
+
     /*För att centrera globala menyn*/
 body {
     text-align:center;
