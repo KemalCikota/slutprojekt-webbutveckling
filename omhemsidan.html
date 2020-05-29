@@ -18,27 +18,27 @@
         </nav>
 		<!--Här slutar nav-->
 			
-            <!--Här startar en ny nav som är av klassen lokalmeny-->
-			<nav class="lokalmeny">
-                <!--Gör en div och skapar en länk i den som leder till Ommig.html-->
+            <!--Här startar en ny nav som är av id-klassen lokalmeny-->
+			<nav id="lokalmeny">
+                <!--Gör en div och skapar en länk i den som leder till Ommig.html och omhemsidan.html-->
                <ul>
 				<li><a href="OmMig.html">Om Mig</a></li>
 				<li><a href="omhemsidan.html">Om hemsidan</a></li>
                </ul>
             <!--Här slutar nav lokalmeny-->
 			</nav>
-            <!--Gör en main som är klassen OmHemsidan-->
+            <!--Gör en main som är klassen grid-->
 				<main class="grid">
                 <!--Gör en div som är i klassen textomhemsidan-->
 				<div>
                     <!--Gör en underrubrik och stänger den-->
 					<h2>Om Den Här Hemsidan</h2>
                     <!--Gör en text och stänger den-->
-					<p>Tack för att ni har besökt min hemsida! Mer information om skaparen till hemsidan hittar ni ovanför.
+					<p>Tack för att ni har besökt min <a href="index.html"> hemsida! </a> Mer information om skaparen till hemsidan hittar ni ovanför.
                         <br/>Det här projektet ska fungera som en kunskapsbas för alla möjliga sorts sporter runt om i världen och jag hoppas att upplevelssen på min hemsida var bra!
                         <br/>Kolla på videon för att se varför jag älskar sport!</p>
                         <br/><br/>
-					<!--ett formulär där man kan lämna en bedömning -->
+					<!--ett formulär med radioknappar och ett textfält, samt en submit knapp -->
 					<h3>Vad tycker ni om min hemsida?</h3>
 					
                     <form action="index.html" method="post">
@@ -56,8 +56,8 @@
 					<br><br>
 					
 					
-					<!-- ett formulär med "checkbox" -->
-					<h4> Vilka sporter vill ni se på min sida?</h4>
+					<!-- ett formulär med "checkbox", textarea och en submit knapp -->
+					<h3> Vilka sporter vill ni se på min sida?</h3>
 					<form action="index.html" method="post">
 					    <input type="checkbox" id="sport1" name="Sport" value="Golf">
 					    <label for="sport1"> Golf</label><br>
@@ -71,8 +71,8 @@
                     </form>
 
 					<br><br>
-					<!--ett formulär med submit -->
-					<h5>Gör gärna ett konto hos oss så du vet när vi gör uppdateringar på vår sida!</h5>
+					<!--text till min enkät -->
+					<h3>Gör gärna ett konto hos oss så du vet när vi gör uppdateringar på vår sida!</h3>
 					<br><br>
 					
                         <form action="index.html" method="post">
@@ -87,7 +87,7 @@
 					
 				</div>
 				<div>
-                    <!--Gör en bild som har attributen "alt = video med sporter"-->
+                    <!--Gör en iframe-->
 					<iframe
 					src="https://www.youtube.com/embed/qnMxsGeDz90">
 					</iframe>

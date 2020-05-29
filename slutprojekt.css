@@ -17,7 +17,7 @@ header{
 .main{
     text-align : center
 }
-/*Ändrar saker för meny-gruppen*/
+/*Ändrar saker för nav-gruppen*/
 nav{
 
     /*Gör meny till en grid area som heter nav för att kunna sätta den i sidans grid senare*/
@@ -35,7 +35,7 @@ nav ul {
     margin: 0;
 
 }
-/*Gör ändringar i alla div som befinner sig i meny-gruppen*/
+/*Gör ändringar i alla nav som befinner sig i nav li-gruppen*/
 nav li{
     /*Sätter texten i mitten*/
     text-align:center;
@@ -44,31 +44,31 @@ nav li{
     /*Gör alla div 10 pixlar större åt alla håll*/
     padding:10px;
 }
-/*Gör ändringar för när man håller muspekaren över alla div i meny-gruppen*/
+/*Gör ändringar för när man håller muspekaren över alla li i meny-gruppen*/
 nav li:hover{
     /*Gör bakgrunden till grå när man håller muspekaren över dem*/
     background-color:rgb(130,130,130);
     /*Gör textens färg till vit när man håller muspekaren över dem*/
     color:rgb(255,255,255);
 }
-/*Gör ändringar för alla länkar i meny-gruppen*/
+/*Gör ändringar för alla länkar i nav-gruppen*/
 nav a{
-    /*Gör hela diven till ett block så man kommer till länken om man klickar någonstans innanför diven*/
+    /*Gör hela nav till ett block så man kommer till länken om man klickar någonstans innanför diven*/
     display:block;
     /*Gör länkarnas texten vit*/
     color:rgb(255,255,255);
     /*Tar bort understruckingen och så länkarna inte ändrar färg*/
     text-decoration:none;
 }
-/*Gör ändringar för lokalmeny-gruppen*/
-.lokalmeny ul{
+/*Gör ändringar för lokalmeny ul-gruppen*/
+#lokalmeny ul{
     list-style-type : none;
     margin: 0;
     padding: 0;
     display: block;
 }
-/*Gör ändringar för alla div i lokalmeny-gruppen*/
-.lokalmeny li{
+/*Gör ändringar för det som behövs i lokalmeny li-gruppen*/
+#lokalmeny li{
     /*placerar texten i mitten av div*/
 	text-align: center;
     /*Ändrar backgrunden till svart*/
@@ -76,16 +76,16 @@ nav a{
     /*Gör alla div 5 pixlar större åt alla håll*/
 	padding: 5px;
 }
-/*Gör ändringar för alla länkar i lokalmeny-gruppen*/
-.lokalmeny a{
-    /*Gör så att länken fyller ut hela div som den är i så att man kan klicka på länken i hela diven*/
+/*Gör ändringar för alla länkar i lokalmeny a-gruppen*/
+#lokalmeny a{
+    /*Gör så att länken fyller ut hela rutan som den är i så att man kan klicka på länken i hela diven*/
 	display:block;
     /*Gör texten vit*/
 	color:rgb(255,255,255);
 	text-decoration:none;
 }
-/*Gör ändringar för alla div i lokalmeny-gruppen när man håller muspekaren över diven*/
-.lokalmeny div:hover{
+/*Gör ändringar för alla li i lokalmeny-gruppen när man håller muspekaren över den*/
+#lokalmeny li:hover{
     /*Ändrar bakgrunden till grå*/
 	background-color:rgb(130,130,130);
     /*Ändrar texten till vit*/
@@ -97,16 +97,16 @@ main.grid {
     grid-template-columns: 2fr 1fr;
 }
 
-/*Gör ändringar för alla texter som är direkt efter en bild i Ommig-gruppen*/
+
 main.grid img + p{
-    /*Gör så att den har ett rundat hörn med 2em som radius*/
+    /*Gör så att den har ett rundat hörn med 2em som radius */
 	border-radius:2em;
 }
-/*Gör ändringar för alla bilder i Ommig-gruppen*/
+
 main.grid img{
-    /*Gör så att bilden fyller 100% av diven på bredden*/
+    /*Gör så att bilden fyller 100% av main på bredden*/
 	width:100%;
-    /*Gör så att bilden har ett rundat hörn på 2.5em som radius*/
+    /*Gör så att bilden har ett rundat hörn på 2.5em som radius utifrån den dåvarande fonten*/
 	border-radius:2.5em;
 }
 
@@ -135,11 +135,11 @@ p[class="bildtext"]{
 }
 /*Gör ändringar för alla första bokstäver i alla texter som är i textommig-gruppen*/
 .textommig p:first-letter{
-    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än elementet*/
+    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än rot-elementets textstorlek*/
 	font-size:1.5rem;
 }
 .textomfotboll p:first-letter{
-    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än elementet*/
+    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än elementets textstorlek*/
 	font-size:1.5rem;
 }
 /*Gör ändingar för alla bilder med attributen alt = "Bild på Mig"*/
@@ -156,15 +156,15 @@ img[alt="Bild på mig"]{
 	margin-left:5%;
 }
 .textombasket p:first-letter{
-    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än rot-elementet*/
+    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än rot-elementets textstorlek*/
 	font-size:1.5rem;
 }
-
+/*min iframe klass*/
 iframe{
     width: 420px;
     height: 315px;
 }
-
+/*min img klass*/
 img{
     width: 447px;
     height: 400px;
@@ -184,7 +184,9 @@ img[alt="Bild på basket"]{
 	margin-left:5%;
 }
 .textompingis p:first-letter{
-    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än */
+    /*Gör så att texten är 1.5 rem som är 1.5 gånger större än rotelementets texstorlek 
+
+    */
 	font-size:1.5rem;
 }
 /*Gör ändingar för alla bilder med attributen alt = "Bild på basket"*/
@@ -206,14 +208,14 @@ table td, table th{
     /*Gör en border och gör så den är solid och så att den är 2 pixlar bred*/
 	border:2px solid;
 }
-/*Gör ändringar för typeravspelare-gruppen*/
+
 table{
     /*Gör en border som är solid och 2 pixlar bred*/
 	border:2px solid;
-    /*Gör så att alla borders som är brevid varandra i typeravspelare-gruppen går ihop så att det bara blir en emellan dem*/
+    /*Gör så att alla borders som är brevid varandra i  gruppen går ihop så att det bara blir en emellan dem*/
 	border-collapse:collapse;
 }
-/*Gör ändringar för alla caption i typeravspelare-gruppen*/
+/*Gör ändringar för alla caption i table caption-gruppen*/
 table caption{
     /*Gör textstorleken till 1.5 gånger större än elementet*/
 	font-size:1.5rem;
@@ -223,8 +225,28 @@ tbody tr:nth-child(odd){
     /*Gör bakgrundsfärgen till grå*/
 	background-color:rgb(150,150,150);
 }
-
-
+/*här börjar min Love Focus Hate*/
+/*färg för länken*/
+a:link {
+    color: blue;
+}
+/*färg för besökta sidor*/
+a:visited{
+    color: green;
+}
+/*färg för det "fokuserade" området i länken*/
+a:focus{
+    color: red;
+}
+/*ändrar färgen när man håller musen över länken*/
+a:hover{
+    color: hotpink;
+}
+/*ändrar färg för aktiva länkar*/
+a:active{
+    color:blue;
+}
+/*här avslutar min Love Focus Hate*/
 
            /*Klass för struktur på text*/
 .grid-container, .grid-container2{
